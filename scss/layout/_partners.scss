@@ -1,0 +1,17 @@
+// Partners section
+.partners {
+    &-section {
+        background: #fbfbfb;
+        padding: 1.5em 0;
+    }
+
+    @include container;
+    @extend %flex;
+
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
+.partner-logo {
+    margin: 0.75em;
+}

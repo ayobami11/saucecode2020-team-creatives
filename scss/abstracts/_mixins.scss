@@ -1,0 +1,14 @@
+@mixin header-bg($bg-image) {
+    background: linear-gradient(hsla(0, 0%, 0%, 0.5), rgba(0, 0, 0, 0.5)),
+        url($bg-image);
+    background-repeat: no-repeat;
+    background-size: cover;
+    max-width: 100%;
+    object-fit: cover;
+    padding: 1em;
+}
+
+@mixin container($vertical-margin: 0) {
+    margin: $vertical-margin auto;
+    width: 90%;
+}

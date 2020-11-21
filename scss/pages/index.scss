@@ -1,0 +1,128 @@
+@import '../abstracts/variables';
+@import '../abstracts/functions';
+@import '../abstracts/mixins';
+@import '../abstracts/placeholders';
+
+@import '../layout/mobile-nav';
+@import '../layout/partners';
+
+@import '../components/button';
+
+// Header
+.header {
+    @include header-bg('../../images/Rectangle (25).png');
+}
+
+// Features section
+.features {
+    &-section {
+        background: get-color('light-gray');
+        padding: 1.5em 0;
+        text-align: center;
+    }
+
+    @include container;
+    @extend %grid;
+    
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+
+}
+
+.feature {
+    @extend %grid;
+
+    margin: 0.5em auto;
+    place-items: center;
+
+    &-image {
+        background: get-color('white');
+        border: 1px solid get-color('sky-blue');
+        border-radius: 50px;
+        margin-bottom: 1em;
+        padding: 1em;
+    }
+
+    &-text {
+        font-weight: font-weight('bold');
+    }
+}
+
+// Services section
+.services {
+    &-section {
+        background: get-color('light-blue');
+        color: get-color('white');
+        padding: 1.5em 0;
+    }
+
+    &-header {
+        @extend %text-center;
+    }
+
+    &-title {
+        color: inherit;
+    }
+
+    @include container;
+    @extend %grid;
+
+    border-radius: 0.25em;
+    grid-gap: 20px;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+}
+
+.service {
+    @extend %grid;
+
+    background: get-color('white');
+    border: 1px solid get-color('gray');
+    color: get-color('sky-blue');
+    padding: 1em 0;
+    place-items: center;
+
+    &-image {
+        max-width: 100px;
+        width: 50%;
+    }
+
+    &-text {
+        color: get-color('sky-blue');
+        font-weight: font-weight('bold');
+        margin-top: 2em;
+    }
+}
+
+// Posts section
+.posts {
+    &-section {
+        background: get-color('light-gray');
+        padding: 1.5em 0;
+    }
+
+    &-header {
+        margin: 1em 0;
+    }
+
+    @include container;
+    @extend %grid;
+    
+    grid-gap: 20px;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+}
+
+.post {
+    border: 1px solid get-color('gray');
+    background: #e5e5e5;
+
+    &-image {
+        width: 100%;
+    }
+
+    &-title {
+        @extend %text-center;
+    }
+
+    &-text {
+        padding: 1em;
+    }
+}

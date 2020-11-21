@@ -1,0 +1,47 @@
+h1 {
+  text-transform: uppercase;
+}
+
+h1, .google-link, .facebook-link {
+  text-align: center;
+}
+
+body {
+  background: rgba(255, 255, 255, 0.5);
+}
+
+h1,
+h2 {
+  color: #3ca86e;
+}
+
+a {
+  text-decoration: none;
+}
+
+.form-section {
+  margin: 1.5em auto;
+  width: 90%;
+  background: #fff;
+  border: 2px solid #3ca86e;
+  max-width: 700px;
+  padding: 1em;
+}
+
+.form-link {
+  color: #222;
+  text-decoration: underline;
+}
+
+.google-link {
+  background: #dc2020;
+}
+
+.facebook-link {
+  background: #1a6194;
+}
+
+textarea {
+  resize: none;
+}
+/*# sourceMappingURL=appointments.css.map */

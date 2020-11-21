@@ -1,0 +1,43 @@
+body {
+    background: hsla(0, 100%, 100%, 0.5);
+}
+
+h1 {
+    @extend %text-uppercase;
+    @extend %text-center;
+}
+
+h1,
+h2 {
+    color: get-color('light-green');
+}
+
+a {
+    text-decoration: none;
+}
+
+.form-section {
+    @include container(1.5em);
+
+    background: get-color('white');
+    border: 2px solid get-color('light-green');
+    max-width: 700px;
+    padding: 1em;
+}
+
+.form-link {
+    color: get-color('dark-gray');
+    text-decoration: underline;
+}
+
+.google-link {
+    @extend %text-center;
+
+    background: get-color('dark-red');
+}
+
+.facebook-link {
+    @extend %text-center;
+
+    background: #1a6194;
+}

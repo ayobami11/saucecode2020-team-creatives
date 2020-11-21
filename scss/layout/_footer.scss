@@ -1,0 +1,31 @@
+.footer {
+    background: get-color('light-blue');
+    color: get-color('white');
+    font-weight: font-weight('medium');
+    line-height: 2;
+
+    &-container {
+        @include container;
+        @extend %flex;
+        @extend %text-center;
+
+        align-items: center;
+        flex-direction: column;
+        max-width: 1000px;
+    }
+
+    address,
+    nav {
+        margin: 0.5em 0;
+    }
+}
+
+@media (min-width: 600px) {
+    .footer {
+        &-container {
+            align-items: flex-start;
+            flex-direction: row;
+            justify-content: space-evenly;
+        }
+    }
+}

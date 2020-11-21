@@ -1,0 +1,101 @@
+h1 {
+  text-transform: uppercase;
+}
+
+.input-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+h1, .google-link, .facebook-link {
+  text-align: center;
+}
+
+body {
+  background: rgba(255, 255, 255, 0.5);
+}
+
+h1,
+h2 {
+  color: #3ca86e;
+}
+
+a {
+  text-decoration: none;
+}
+
+.form-section {
+  margin: 1.5em auto;
+  width: 90%;
+  background: #fff;
+  border: 2px solid #3ca86e;
+  max-width: 700px;
+  padding: 1em;
+}
+
+.form-link {
+  color: #222;
+  text-decoration: underline;
+}
+
+.google-link {
+  background: #dc2020;
+}
+
+.facebook-link {
+  background: #1a6194;
+}
+
+.input-container {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin: 0.5em 0;
+}
+
+.form-label {
+  color: #bdbdbd;
+  margin-bottom: 0.25em;
+}
+
+.form-input {
+  border: 1px solid #bdbdbd;
+  padding: 0.25em;
+  outline: none;
+}
+
+.link-btn {
+  background: #3ca86e;
+  border-radius: 0.5em;
+  color: #fff;
+  display: inline-block;
+  font-weight: 700;
+  padding: 0.4em 0.8em;
+  margin: 0.75em 0;
+}
+
+.btn {
+  border: none;
+  color: #fff;
+  display: block;
+  font-weight: 700;
+  margin: 1.25em 0;
+  padding: 0.5em 1em;
+  outline: none;
+}
+
+.btn-center {
+  display: block;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  margin: 1.25em auto;
+}
+
+.submit-btn {
+  background: #3ca86e;
+  color: #fff;
+}
+/*# sourceMappingURL=login.css.map */

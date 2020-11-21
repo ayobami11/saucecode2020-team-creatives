@@ -1,0 +1,98 @@
+@import '../abstracts/variables';
+@import '../abstracts/functions';
+@import '../abstracts/mixins';
+@import '../abstracts/placeholders';
+
+@import '../layout/mobile-nav';
+
+// Header
+.header {
+    @include header-bg('../../images/Rectangle (19).png');
+}
+
+// Aims section
+.aims {
+    &-section {
+        background: #e5e5e5;
+        padding: 1.5em 0;
+    }
+    
+    &-container {
+        @include container;
+        @extend %flex;
+        
+        align-items: center;
+        flex-wrap: wrap;
+        text-align: center;
+        justify-content: space-between;
+    }
+
+    &-header {
+        color: get-color('light-blue');
+        font-weight: font-weight('bold');
+    }
+    
+    &-text {
+        flex: 1 1 300px;
+        line-height: 2;
+        max-width: 750px;
+        margin-left: 1.5em;
+    }
+}
+
+// Values section
+.values-section {
+    background: #e5e5e5;
+    padding: 1.5em 0;
+}
+
+.values {
+    &-header {
+        margin: .75em 0;
+    }
+
+    @include container;
+    @extend %grid;
+
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-gap: 15px;
+
+}
+
+.value {
+    @extend %grid;
+    
+    border: 1px solid get-color('gray');
+    padding: .5em;
+    text-align: center;
+    place-items: center;
+
+    &-figure {
+        margin-bottom: .75em;
+    }
+}
+
+// Features section
+.features {
+    &-section {
+        background: get-color('light-gray');
+        padding: 1.5em 0;
+    }
+    
+    &-container {
+        @include container;
+        @extend %flex;
+        
+        align-items: center;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+
+    flex: 1 1 300px;
+    max-width: 750px;
+    margin-right: 1.5em;
+
+    &-image {
+        margin: .75em auto;
+    }
+}

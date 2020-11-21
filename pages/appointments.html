@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Healthic | Appointments</title>
+
+        <link rel="stylesheet" href="../css/main.css" />
+        <link rel="stylesheet" href="../css/pages/appointments.css" />
+        <script
+            src="https://kit.fontawesome.com/a21dc2a35f.js"
+            crossorigin="anonymous"
+        ></script>
+        <script src="../js/formValidation.js" defer></script>
+    </head>
+    <body>
+        <!-- Header -->
+        <header>
+            <h1>Healthic</h1>
+        </header>
+        <!-- Main -->
+        <main>
+            <section class="form-section">
+                <h2>Appointment form</h2>
+                <!-- Form section -->
+                <form action="./index.html" method="POST">
+                    <div class="input-container">
+                        <label class="form-label" for="department"
+                            >Select department</label
+                        >
+                        <select id="department" name="department">
+                            <option value="obstetrics-gynaecology">
+                                Obstetrics & Gynaecology
+                            </option>
+                            <option value="pediatrics">Pediatrics</option>
+                            <option value="neonatal">Neonatal</option>
+                            <option value="laboratory-services">
+                                Laboratory services
+                            </option>
+                        </select>
+                    </div>
+                    <div class="input-container">
+                        <label class="form-label" for="patient-name"
+                            >Patient name</label
+                        >
+                        <input
+                            id="patient-name"
+                            class="form-input"
+                            type="text"
+                            name="patient-name"
+                            pattern="^[a-zA-Z-]+$"
+                            required
+                            aria-required="true"
+                        />
+                    </div>
+                    <div class="input-container">
+                        <label class="form-label" for="email">Email</label>
+                        <input
+                            id="email"
+                            class="form-input"
+                            type="email"
+                            name="email"
+                            pattern="^[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$"
+                            required
+                            aria-required="true"
+                        />
+                    </div>
+                    <div class="input-container">
+                        <label class="form-label" for="phone-number"
+                            >Phone number</label
+                        >
+                        <input
+                            id="phone-number"
+                            class="form-input"
+                            type="tel"
+                            name="phone-number"
+                            required
+                            aria-required="true"
+                        />
+                    </div>
+                    <div class="input-container">
+                        <label class="form-label" for="appointment-time"
+                            >Time of availability</label
+                        >
+                        <input
+                            id="appointment-time"
+                            class="form-input"
+                            type="time"
+                            name="appointment-time"
+                            required
+                            aria-required="true"
+                        />
+                    </div>
+                    <div class="input-container">
+                        <label class="form-label" for="appointment-date"
+                            >Date for the appointment</label
+                        >
+                        <input
+                            id="appointment-date"
+                            class="form-input"
+                            type="date"
+                            name="appointment-date"
+                            required
+                            aria-required="true"
+                        />
+                    </div>
+                    <div class="input-container">
+                        <label class="form-label" for="appointment-notes"
+                            >Notes</label
+                        >
+                        <textarea
+                            id="appointment-notes"
+                            class="form-input"
+                            name="appointment-notes"
+                            cols="30"
+                            rows="10"
+                        ></textarea>
+                    </div>
+                    <button class="btn submit-btn" type="submit">
+                        Make an appointment
+                    </button>
+                </form>
+            </section>
+        </main>
+    </body>
+</html>

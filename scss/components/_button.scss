@@ -1,0 +1,30 @@
+.link-btn {
+    background: get-color('light-green');
+    border-radius: 0.5em;
+    color: get-color('white');
+    display: inline-block;
+    font-weight: font-weight('bold');
+    padding: 0.4em 0.8em;
+    margin: 0.75em 0;
+}
+
+.btn {
+    border: none;
+    color: get-color('white');
+    display: block;
+    font-weight: font-weight('bold');
+    margin: 1.25em 0;
+    padding: 0.5em 1em;
+    outline: none;
+}
+
+.btn-center {
+    display: block;
+    width: fit-content;
+    margin: 1.25em auto;
+}
+
+.submit-btn {
+    background: get-color('light-green');
+    color: get-color('white');
+}

@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Healthic | Sign Up</title>
+
+        <link rel="stylesheet" href="../css/main.css" />
+        <link rel="stylesheet" href="../css/pages/signup.css" />
+        <script
+            src="https://kit.fontawesome.com/a21dc2a35f.js"
+            crossorigin="anonymous"
+        ></script>
+        <script src="../js/formValidation.js" defer></script>
+    </head>
+    <body>
+        <!-- Header -->
+        <header class="page-header">
+            <h1 class="page-title">Healthic</h1>
+        </header>
+        <!-- Main -->
+        <main>
+            <!-- Form section -->
+            <section class="form-section">
+                <h2 class="form-title">Register</h2>
+                <ul class="instructions">
+                    <li>
+                        All input fields are required and password fields must
+                        match.
+                    </li>
+                    <li>
+                        Name inputs can only include alphabets and the hyphen
+                        character.
+                    </li>
+                </ul>
+                <form
+                    action="https://healthic.herokuapp.com/api/v1/users/signup"
+                    method="POST"
+                >
+                    <div class="input-container">
+                        <label class="form-label" for="first-name"
+                            >First name</label
+                        >
+                        <input
+                            id="first-name"
+                            class="form-input validate"
+                            type="text"
+                            name="first-name"
+                            pattern="^[a-zA-Z-]+$"
+                            required
+                            aria-required="true"
+                        />
+                    </div>
+                    <div class="input-container">
+                        <label class="form-label" for="last-name"
+                            >Last name</label
+                        >
+                        <input
+                            id="last-name"
+                            class="form-input validate"
+                            type="text"
+                            name="last-name"
+                            pattern="^[a-zA-Z-]+$"
+                            required
+                            aria-required="true"
+                        />
+                    </div>
+                    <div class="input-container">
+                        <label class="form-label" for="date-of-birth"
+                            >Date of birth</label
+                        >
+                        <input
+                            id="date-of-birth"
+                            class="form-input validate"
+                            type="date"
+                            name="date-of-birth"
+                            required
+                            aria-required="true"
+                        />
+                    </div>
+                    <div class="input-container">
+                        <p class="form-label">Gender</p>
+                        <div class="gender-container">
+                            <div>
+                                <input
+                                    id="gender-male"
+                                    type="radio"
+                                    name="gender"
+                                    value="male"
+                                    checked
+                                    aria-checked="true"
+                                />
+                                <label for="gender-male">Male</label>
+                            </div>
+                            <div>
+                                <input
+                                    id="gender-female"
+                                    type="radio"
+                                    name="gender"
+                                    value="male"
+                                />
+                                <label for="gender-female">Female</label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="input-container">
+                        <label class="form-label" for="email">Email</label>
+                        <input
+                            id="email"
+                            class="form-input validate"
+                            type="email"
+                            name="email"
+                            pattern="^[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$"
+                            required
+                            aria-required="true"
+                        />
+                    </div>
+                    <div class="input-container">
+                        <label class="form-label" for="password"
+                            >Password</label
+                        >
+                        <input
+                            id="password"
+                            class="form-input validate"
+                            type="password"
+                            name="password"
+                            minlength="8"
+                            required
+                            aria-required="true"
+                        />
+                    </div>
+                    <div class="input-container">
+                        <label class="form-label" for="confirm password"
+                            >Confirm password</label
+                        >
+                        <input
+                            id="confirm-password validate"
+                            class="form-input"
+                            type="password"
+                            name="confirm-password"
+                            minlength="8"
+                            required
+                            aria-required="true"
+                        />
+                    </div>
+                    <div>
+                        <input
+                            id="terms"
+                            type="checkbox"
+                            name="terms"
+                            required
+                            aria-required="true"
+                        />
+                        <label for="terms"
+                            >I agree with the terms and conditions.</label
+                        >
+                    </div>
+                    <button
+                        id="submit-btn"
+                        class="btn submit-btn"
+                        type="submit"
+                    >
+                        Create account
+                    </button>
+                </form>
+                <p>
+                    Already have an account?
+                    <a class="form-link" href="./login.html">Log in</a>
+                </p>
+                OR
+                <a class="btn google-link" href="#"
+                    ><i class="fab fa-google"></i>Sign up using Google
+                    account</a
+                >
+                <a class="btn facebook-link" href="#"
+                    ><i class="fab fa-facebook"></i>Sign up using Facebook
+                    account</a
+                >
+            </section>
+        </main>
+    </body>
+</html>

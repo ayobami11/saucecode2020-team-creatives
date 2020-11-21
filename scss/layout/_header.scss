@@ -1,0 +1,55 @@
+.header {
+    @extend %grid;
+
+    color: get-color('white');
+    height: 100vh;
+
+    &-title {
+        font-weight: font-weight('bold');
+    }
+
+    &-container {
+        @include container;
+        @extend %flex;
+
+        align-self: start;
+    }
+
+    &-navbar {
+        display: none;
+    }
+
+    &-link {
+        color: darken(get-color('white'), 25%);
+    }
+
+    &-link.current {
+        border-bottom: 15px dotted get-color('light-green');
+        color: lighten(get-color('white'), 25%);
+    }
+
+    &-link.link-btn {
+        color: get-color('white');
+    }
+
+    &-text {
+        font-weight: font-weight('bold');
+        place-self: center;
+    }
+}
+
+@media (min-width: 600px) {
+    .header {
+        &-navbar {
+            display: block;
+            width: 100%;
+        }
+
+        &-list {
+            display: flex;
+            align-items: center;
+            justify-content: space-around;
+            width: 100%;
+        }
+    }
+}

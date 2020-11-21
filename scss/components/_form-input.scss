@@ -1,0 +1,17 @@
+.input-container {
+    @extend %flex;
+
+    flex-direction: column;
+    margin: 0.5em 0;
+}
+
+.form-label {
+    color: get-color('gray');
+    margin-bottom: 0.25em;
+}
+
+.form-input {
+    border: 1px solid get-color('gray');
+    padding: 0.25em;
+    outline: none;
+}

@@ -1,0 +1,50 @@
+.hamburger {
+    &-section {
+        @include container;
+
+        background: get-color('white');
+        border-radius: 10px;
+        box-shadow: 24px 18px 64px rgba(0, 0, 0, 0.1);
+        display: none;
+        max-width: 400px;
+        filter: brightness(200%);
+        position: fixed;
+        left: 0;
+        line-height: 2.85em;
+        margin-top: 3.5em;
+        padding: 0.5em;
+        right: 0;
+        top: 0;
+        z-index: 2;
+    }
+
+    &-list {
+        @extend %flex;
+
+        align-items: center;
+        flex-direction: column;
+        justify-content: center;
+        width: 100%;
+    }
+
+    &-list a {
+        color: get-color('dark-gray');
+        font-weight: font-weight('bold');
+        transition: color 0.25s ease-in-out;
+
+        &.hamburger-current {
+            color: darken(get-color('light-green'), 25%);
+        }
+    }
+}
+
+// JS styles
+.toggle-hamburger {
+    display: block;
+}
+
+@media (min-width: 600px) {
+    .hamburger-section {
+        display: none;
+    }
+}

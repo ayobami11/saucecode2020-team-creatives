@@ -1,0 +1,94 @@
+@import '../abstracts/variables';
+@import '../abstracts/functions';
+@import '../abstracts/mixins';
+@import '../abstracts/placeholders';
+
+@import '../layout/mobile-nav';
+@import '../layout/partners';
+
+@import '../components/button';
+
+main .link-btn {
+    @extend %text-uppercase;
+
+    font-weight: font-weight('bold');
+}
+
+.header {
+    @include header-bg('../../images/Rectangle (25).png');
+}
+
+// Blog section
+.blogs {
+    &-section {
+        padding: 1.5em 0;
+    }
+
+    &-header {
+        @include container;
+        @extend %text-center;
+    
+        color: get-color('light-blue');
+    }
+
+    &-title {
+        margin-bottom: 1em;
+        text-align: left;
+    }
+
+    @include container;
+    @extend %grid;
+    
+    grid-gap: 15px;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+}
+
+.blog {
+    @extend %grid;
+
+    border: 1px solid get-color('sky-blue');
+    border-radius: 5px;
+    place-items: center;
+
+    &-image {
+        // min-height: 200px;
+        width: 100%;
+    }
+
+    &-text {
+        padding: .5em;
+    }
+}
+
+// Feedback section
+.feedback-section {
+    background: get-color('light-gray');
+    padding: 1.5em 0;
+}
+
+.feedbacks {
+    @include container;
+    @extend %grid;
+
+    grid-gap: 20px;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+}
+
+.feedback {
+    @extend %grid;
+
+    border: 1px solid #c4c4c4;
+    margin: 0.75em 0;
+    padding: 0.5em;
+    place-items: center;
+}
+
+.patient-name {
+    margin: 1em 0;
+}
+
+@media (min-width: 600px) {
+    .blogs {
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    }
+}
