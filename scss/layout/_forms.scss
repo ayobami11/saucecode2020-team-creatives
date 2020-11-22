@@ -34,7 +34,7 @@ a {
     &-or {
         @extend %text-center;
 
-        border-bottom: 1px solid black;
+        border-bottom: 2px solid darken(get-color('gray'), 50%);
         color: get-color('light-green');
         font-size: 1.125rem;
         font-weight: font-weight('bold');
