@@ -86,13 +86,14 @@ main .link-btn {
 }
 
 .form-label {
-  color: #bdbdbd;
+  color: #3e3e3e;
   margin-bottom: 0.25em;
 }
 
 .form-input {
-  border: 1px solid #bdbdbd;
-  padding: 0.25em;
+  border: 1px solid #3e3e3e;
+  border-radius: 10px;
+  padding: .25em 1em;
   outline: none;
 }
 
@@ -114,6 +115,7 @@ main .link-btn {
   margin: 1.25em 0;
   padding: 0.5em 1em;
   outline: none;
+  width: 100%;
 }
 
 .link-btn,

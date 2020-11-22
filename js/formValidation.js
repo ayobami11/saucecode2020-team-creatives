@@ -20,6 +20,7 @@ const validateFormInputs = async (event) => {
         const form = event.target;
         const url = form.action;
         const formData = new FormData(form);
+        console.log(...formData)
         
         try {
             const response = await fetch(url, {

@@ -16,19 +16,38 @@ a {
     text-decoration: none;
 }
 
-.form-section {
-    @include container(1.5em);
+.form {
+    &-section {
+        @include container(1.5em);
+    
+        background: get-color('white');
+        border: 2px solid darken(get-color('gray'), 50%);
+        max-width: 700px;
+        padding: 1em;
+    }
+    
+    &-link {
+        color: get-color('dark-gray');
+        text-decoration: underline;
+    }
 
-    background: get-color('white');
-    border: 2px solid get-color('light-green');
-    max-width: 700px;
-    padding: 1em;
+    &-or {
+        @extend %text-center;
+
+        border-bottom: 1px solid black;
+        color: get-color('light-green');
+        font-size: 1.125rem;
+        font-weight: font-weight('bold');
+        line-height: .12em;
+        margin: 1em 0;
+
+        span {
+            background: #fff;
+            padding: 0 1em;
+        }
+    }
 }
 
-.form-link {
-    color: get-color('dark-gray');
-    text-decoration: underline;
-}
 
 .google-link {
     @extend %text-center;

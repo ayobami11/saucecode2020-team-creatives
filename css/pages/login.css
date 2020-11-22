@@ -8,7 +8,7 @@ h1 {
   display: flex;
 }
 
-h1, .google-link, .facebook-link {
+h1, .form-or, .google-link, .facebook-link {
   text-align: center;
 }
 
@@ -29,7 +29,7 @@ a {
   margin: 1.5em auto;
   width: 90%;
   background: #fff;
-  border: 2px solid #3ca86e;
+  border: 2px solid #3e3e3e;
   max-width: 700px;
   padding: 1em;
 }
@@ -37,6 +37,20 @@ a {
 .form-link {
   color: #222;
   text-decoration: underline;
+}
+
+.form-or {
+  border-bottom: 1px solid black;
+  color: #3ca86e;
+  font-size: 1.125rem;
+  font-weight: 700;
+  line-height: .12em;
+  margin: 1em 0;
+}
+
+.form-or span {
+  background: #fff;
+  padding: 0 1em;
 }
 
 .google-link {
@@ -61,13 +75,14 @@ a {
 }
 
 .form-label {
-  color: #bdbdbd;
+  color: #3e3e3e;
   margin-bottom: 0.25em;
 }
 
 .form-input {
-  border: 1px solid #bdbdbd;
-  padding: 0.25em;
+  border: 1px solid #3e3e3e;
+  border-radius: 10px;
+  padding: .25em 1em;
   outline: none;
 }
 
@@ -89,6 +104,7 @@ a {
   margin: 1.25em 0;
   padding: 0.5em 1em;
   outline: none;
+  width: 100%;
 }
 
 .link-btn,
