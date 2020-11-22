@@ -21,7 +21,7 @@ main .link-btn {
 // Blog section
 .blogs {
     &-section {
-        padding: 1.5em 0;
+        @extend %padding-vertical;
     }
 
     &-header {
@@ -46,12 +46,13 @@ main .link-btn {
 .blog {
     @extend %grid;
 
+    
     border: 1px solid get-color('sky-blue');
     border-radius: 5px;
-    place-items: center;
+    grid-auto-rows: 250px;
+    height: fit-content;
 
     &-image {
-        // min-height: 200px;
         width: 100%;
     }
 
@@ -62,8 +63,9 @@ main .link-btn {
 
 // Feedback section
 .feedback-section {
+    @extend %padding-vertical;
+
     background: get-color('light-gray');
-    padding: 1.5em 0;
 }
 
 .feedbacks {
@@ -84,8 +86,16 @@ main .link-btn {
 }
 
 .patient-name {
+    font-style: italic;
+    font-weight: font-weight('medium');
     margin: 1em 0;
+
+    &::before {
+        content: '-';
+        margin-right: .5em;
+    }
 }
+
 
 @media (min-width: 600px) {
     .blogs {

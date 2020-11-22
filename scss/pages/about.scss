@@ -13,8 +13,9 @@
 // Aims section
 .aims {
     &-section {
+        @extend %padding-vertical;
+
         background: #e5e5e5;
-        padding: 1.5em 0;
     }
     
     &-container {
@@ -42,8 +43,9 @@
 
 // Values section
 .values-section {
+    @extend %padding-vertical;
+    
     background: #e5e5e5;
-    padding: 1.5em 0;
 }
 
 .values {
@@ -75,8 +77,9 @@
 // Features section
 .features {
     &-section {
+        @extend %padding-vertical;
+
         background: get-color('light-gray');
-        padding: 1.5em 0;
     }
     
     &-container {

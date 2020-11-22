@@ -21,12 +21,9 @@ h2, .footer-container {
 * {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
   margin: 0;
   padding: 0;
-}
-
-body {
-  font-family: "Poppins", sans-serif;
 }
 
 img {
@@ -97,9 +94,15 @@ figcaption {
 .header-container {
   margin: 0 auto;
   width: 90%;
-  -ms-flex-item-align: start;
-      -ms-grid-row-align: start;
-      align-self: start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
 }
 
 .header-navbar {
@@ -111,8 +114,18 @@ figcaption {
 }
 
 .header-link.current {
-  border-bottom: 15px dotted #3ca86e;
   color: white;
+  font-weight: 500;
+}
+
+.header-link.current::after {
+  background: #3ca86e;
+  border-radius: 50%;
+  content: '';
+  display: block;
+  height: 10px;
+  margin: .075em auto;
+  width: 10px;
 }
 
 .header-link.link-btn {
@@ -120,6 +133,7 @@ figcaption {
 }
 
 .header-text {
+  font-size: 2rem;
   font-weight: 700;
   place-self: center;
 }
@@ -139,6 +153,9 @@ figcaption {
     -ms-flex-pack: distribute;
         justify-content: space-around;
     width: 100%;
+  }
+  i.hamburger {
+    display: none;
   }
 }
 

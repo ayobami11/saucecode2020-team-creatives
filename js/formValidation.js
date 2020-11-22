@@ -26,7 +26,7 @@ const validateFormInputs = async (event) => {
             const response = await fetch(url, {
                 method: 'POST',
                 headers: {
-                    'Content-Type': 'application/json; charset=UTF-8'
+                    'Content-Type': 'application/x-www-form-urlencoded; charset=UTF-8'
                 },
                 body: JSON.stringify(formData)
             });

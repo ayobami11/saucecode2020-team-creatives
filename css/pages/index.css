@@ -13,6 +13,10 @@
   text-align: center;
 }
 
+.partners-section, .features-section, .services-section, .posts-section {
+  padding: 1.5em 0;
+}
+
 .hamburger-section {
   margin: 0 auto;
   width: 90%;
@@ -81,7 +85,6 @@
 
 .partners-section {
   background: #fbfbfb;
-  padding: 1.5em 0;
 }
 
 .partner-logo {
@@ -141,7 +144,6 @@
 
 .features-section {
   background: #efefef;
-  padding: 1.5em 0;
   text-align: center;
 }
 
@@ -174,7 +176,6 @@
 .services-section {
   background: #377aaa;
   color: #fff;
-  padding: 1.5em 0;
 }
 
 .services-title {
@@ -210,7 +211,6 @@
 
 .posts-section {
   background: #efefef;
-  padding: 1.5em 0;
 }
 
 .posts-header {

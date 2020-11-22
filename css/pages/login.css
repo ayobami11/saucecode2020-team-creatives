@@ -47,6 +47,11 @@ a {
   background: #1a6194;
 }
 
+.fa-google,
+.fa-facebook {
+  padding-right: .5em;
+}
+
 .input-container {
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
