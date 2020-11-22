@@ -21,18 +21,23 @@ const validateFormInputs = async (event) => {
         const form = event.target;
         const url = form.action;
         const formData = new FormData(form);
-
+        let user = {}
+        formData.forEach((value, key) => {
+            user[key] = value;
+        })
+        console.log(user)
         try {
             const response = await fetch(url, {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json; charset=UTF-8'
                 },
-                body: JSON.stringify(formData)
+                body: JSON.stringify(user)
             });
 
             console.log(response);
             const jsonResponse = await response.json();
+            console.log(jsonResponse)
             if (jsonResponse.success) {
                 console.log('Successful');
             } else {
