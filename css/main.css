@@ -69,6 +69,11 @@ figcaption {
   outline: none;
 }
 
+.link-btn,
+.btn {
+  cursor: pointer;
+}
+
 .btn-center {
   display: block;
   width: -webkit-fit-content;

@@ -8,7 +8,7 @@ main .link-btn {
   display: flex;
 }
 
-.blogs, .blog, .feedbacks, .feedback {
+.blogs, .feedbacks, .feedback {
   display: -ms-grid;
   display: grid;
 }
@@ -115,6 +115,11 @@ main .link-btn {
   outline: none;
 }
 
+.link-btn,
+.btn {
+  cursor: pointer;
+}
+
 .btn-center {
   display: block;
   width: -webkit-fit-content;
@@ -165,10 +170,6 @@ main .link-btn {
 .blog {
   border: 1px solid #75afba;
   border-radius: 5px;
-  grid-auto-rows: 250px;
-  height: -webkit-fit-content;
-  height: -moz-fit-content;
-  height: fit-content;
 }
 
 .blog-image {
