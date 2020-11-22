@@ -9,6 +9,10 @@
   display: grid;
 }
 
+.aims-section, .values-section, .features-section {
+  padding: 1.5em 0;
+}
+
 .hamburger-section {
   margin: 0 auto;
   width: 90%;
@@ -78,7 +82,6 @@
 
 .aims-section {
   background: #e5e5e5;
-  padding: 1.5em 0;
 }
 
 .aims-container {
@@ -111,7 +114,6 @@
 
 .values-section {
   background: #e5e5e5;
-  padding: 1.5em 0;
 }
 
 .values {
@@ -147,7 +149,6 @@
 
 .features-section {
   background: #efefef;
-  padding: 1.5em 0;
 }
 
 .features-container {

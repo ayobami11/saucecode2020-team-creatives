@@ -4,7 +4,7 @@ const validatePasswords = () => {
     const passwordInputs = [
         ...document.querySelectorAll('input[type="password"]')
     ];
-    return passwordInputs.length === 1
+    return passwordInputs.length <= 1
         ? true
         : passwordInputs[0].value === passwordInputs[1].value;
 };
@@ -16,25 +16,26 @@ const validateFormInputs = async (event) => {
     const inputsValidated = formInputs.every((formInput) =>
         formInput.checkValidity()
     );
-
-    if (inputsValidated && validatePasswords()) {
+    if (inputsValidated && (validatePasswords() ?? true)) {
         const form = event.target;
         const url = form.action;
         const formData = new FormData(form);
+                            
         let user = {}
         formData.forEach((value, key) => {
             user[key] = value;
         })
         console.log(user)
+
         try {
             const response = await fetch(url, {
                 method: 'POST',
                 headers: {
-                    'Content-Type': 'application/json; charset=UTF-8'
+                    'Content-Type': 'application/x-www-form-urlencoded; charset=UTF-8'
                 },
                 body: JSON.stringify(user)
             });
-
+            
             console.log(response);
             const jsonResponse = await response.json();
             console.log(jsonResponse)

@@ -5,6 +5,9 @@
 
 @import '../layout/forms';
 
+@import '../components/form-input';
+@import '../components/button';
+
 textarea {
     resize: none;
 }

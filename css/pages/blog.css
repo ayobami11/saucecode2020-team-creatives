@@ -8,13 +8,17 @@ main .link-btn {
   display: flex;
 }
 
-.blogs, .blog, .feedbacks, .feedback {
+.blogs, .feedbacks, .feedback {
   display: -ms-grid;
   display: grid;
 }
 
 .blogs-header {
   text-align: center;
+}
+
+.partners-section, .blogs-section, .feedback-section {
+  padding: 1.5em 0;
 }
 
 .hamburger-section {
@@ -85,7 +89,6 @@ main .link-btn {
 
 .partners-section {
   background: #fbfbfb;
-  padding: 1.5em 0;
 }
 
 .partner-logo {
@@ -110,6 +113,11 @@ main .link-btn {
   margin: 1.25em 0;
   padding: 0.5em 1em;
   outline: none;
+}
+
+.link-btn,
+.btn {
+  cursor: pointer;
 }
 
 .btn-center {
@@ -148,10 +156,6 @@ main .link-btn {
       grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
 }
 
-.blogs-section {
-  padding: 1.5em 0;
-}
-
 .blogs-header {
   margin: 0 auto;
   width: 90%;
@@ -166,7 +170,6 @@ main .link-btn {
 .blog {
   border: 1px solid #75afba;
   border-radius: 5px;
-  place-items: center;
 }
 
 .blog-image {
@@ -179,7 +182,6 @@ main .link-btn {
 
 .feedback-section {
   background: #efefef;
-  padding: 1.5em 0;
 }
 
 .feedbacks {
@@ -198,7 +200,14 @@ main .link-btn {
 }
 
 .patient-name {
+  font-style: italic;
+  font-weight: 500;
   margin: 1em 0;
+}
+
+.patient-name::before {
+  content: '-';
+  margin-right: .5em;
 }
 
 @media (min-width: 600px) {

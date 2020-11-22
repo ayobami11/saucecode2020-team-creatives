@@ -22,8 +22,9 @@ main .link-btn {
 // Services section
 .services {
     &-section {
+        @extend %padding-vertical;
+
         background: #e5e5e5;
-        padding: 1.5em 0;
     }
 
     &-header {
@@ -59,8 +60,9 @@ main .link-btn {
 
 // Extra services section
 .extra-services-section {
+    @extend %padding-vertical;
+
     background: get-color('light-blue');
-    padding: 1.5em 0;
 
     header {
         margin: .75em 0;
@@ -93,7 +95,7 @@ main .link-btn {
 // Newsletter section
 .newsletter {
     &-section {
-        padding: 1em 0;
+        @extend %padding-vertical;
     }
 
     &-header {

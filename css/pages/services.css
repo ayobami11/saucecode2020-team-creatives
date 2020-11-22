@@ -17,6 +17,10 @@ main .link-btn {
   text-align: center;
 }
 
+.services-section, .extra-services-section, .newsletter-section {
+  padding: 1.5em 0;
+}
+
 .hamburger-section {
   margin: 0 auto;
   width: 90%;
@@ -112,6 +116,11 @@ main .link-btn {
   outline: none;
 }
 
+.link-btn,
+.btn {
+  cursor: pointer;
+}
+
 .btn-center {
   display: block;
   width: -webkit-fit-content;
@@ -150,7 +159,6 @@ main .link-btn {
 
 .services-section {
   background: #e5e5e5;
-  padding: 1.5em 0;
 }
 
 .services-header {
@@ -174,7 +182,6 @@ main .link-btn {
 
 .extra-services-section {
   background: #377aaa;
-  padding: 1.5em 0;
 }
 
 .extra-services-section header {
@@ -196,10 +203,6 @@ main .link-btn {
 
 .extra-service figcaption {
   font-weight: 500;
-}
-
-.newsletter-section {
-  padding: 1em 0;
 }
 
 .newsletter-header {

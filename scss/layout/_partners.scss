@@ -1,8 +1,9 @@
 // Partners section
 .partners {
     &-section {
+        @extend %padding-vertical;
+
         background: #fbfbfb;
-        padding: 1.5em 0;
     }
 
     @include container;

@@ -12,7 +12,9 @@
         @include container;
         @extend %flex;
 
-        align-self: start;
+        align-items: center;
+        justify-content: space-between;
+        height: fit-content;
     }
 
     &-navbar {
@@ -24,8 +26,18 @@
     }
 
     &-link.current {
-        border-bottom: 15px dotted get-color('light-green');
         color: lighten(get-color('white'), 25%);
+        font-weight: font-weight('medium');
+
+        &::after {
+            background: get-color('light-green');
+            border-radius: 50%;
+            content: '';
+            display: block;
+            height: 10px;
+            margin: .075em auto;
+            width: 10px;
+        }
     }
 
     &-link.link-btn {
@@ -33,6 +45,7 @@
     }
 
     &-text {
+        font-size: 2rem;
         font-weight: font-weight('bold');
         place-self: center;
     }
@@ -51,5 +64,9 @@
             justify-content: space-around;
             width: 100%;
         }
+    }
+
+    i.hamburger {
+        display: none;
     }
 }
