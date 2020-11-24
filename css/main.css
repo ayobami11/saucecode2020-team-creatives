@@ -246,6 +246,11 @@ figcaption {
   margin: 0.5em 0;
 }
 
+.social-icons {
+  font-size: 1.125rem;
+  margin-right: .5em;
+}
+
 @media (min-width: 600px) {
   .footer-container {
     -webkit-box-align: start;
