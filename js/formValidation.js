@@ -25,18 +25,16 @@ const validateFormInputs = async (event) => {
         formData.forEach((value, key) => {
             user[key] = value;
         })
-        console.log(user)
-
+        delete user.terms;
+        delete user['confirm-password'];
         try {
             const response = await fetch(url, {
                 method: 'POST',
                 headers: {
-                    'Content-Type': 'application/x-www-form-urlencoded; charset=UTF-8'
+                    'Content-Type': 'application/json; charset=UTF-8'
                 },
                 body: JSON.stringify(user)
             });
-            
-            console.log(response);
             const jsonResponse = await response.json();
             console.log(jsonResponse)
             if (jsonResponse.success) {
